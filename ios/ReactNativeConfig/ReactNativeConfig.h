@@ -5,9 +5,14 @@
 #else
 #import "RCTBridgeModule.h"
 #endif
+
+#ifndef ReactNativeConfig_Bunch
+#define ReactNativeConfig_Bunch
 @interface ReactNativeConfig : NSObject <RCTBridgeModule>
 
 + (NSDictionary *)env;
 + (NSString *)envFor: (NSString *)key;
 
 @end
+#endif /* ReactNativeConfig_Bunch */
+
